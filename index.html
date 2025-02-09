@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Translator</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Italian to Sinhala, Tamil, Tagalog Translation</h1>
+        <textarea id="textInput" rows="4" cols="50" placeholder="Enter Italian text or speak..."></textarea>
+        <select id="languageSelect">
+            <option value="si">Sinhala</option>
+            <option value="ta">Tamil</option>
+            <option value="tl">Tagalog</option>
+        </select>
+        <div>
+            <span class="icon material-icons" id="recordButton" onclick="startRecording()">mic</span>
+            <span class="icon material-icons" id="stopButton" onclick="stopRecording()" style="display:none;">stop</span>
+            <button class="button" onclick="translateText()">Translate</button>
+        </div>
+        <h2>Translation:</h2>
+        <p id="outputText" class="output"></p>
+        <audio id="audioPlayer" controls style="display:none;"></audio>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>
